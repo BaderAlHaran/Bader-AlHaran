@@ -917,4 +917,65 @@ footer {
         justify-content: center;
     }
 }
+/* Improve mobile responsiveness */
+@media (max-width: 768px) {
+  /* Fix centering issues */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Make containers take full width */
+  .projects-skills-container,
+  .contact-section,
+  .hero-section {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  /* Fix padding and margins */
+  main {
+    padding: 0;
+  }
+  
+  /* Adjust text sizes for mobile */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  /* Ensure project cards stay within bounds */
+  .project-grid {
+    width: 100%;
+  }
+  
+  /* Make contact items stack better */
+  .contact-details {
+    gap: 1rem;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem;
+  }
+  
+  a {
+    margin: 8px;
+    font-size: 18px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+html, body {
+     max-width: 100%;
+     overflow-x: hidden;
+}
 
