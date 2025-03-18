@@ -999,6 +999,38 @@ footer {
     box-sizing: border-box;
   }
 }
+/* Final mobile tweaks */
+@media (max-width: 768px) {
+  /* Improve skill name alignment */
+  .skill-item h3 {
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  /* Fix project cards */
+  .project-card {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  /* Add space between project card elements */
+  .project-card h3 {
+    margin-top: 1.5rem;
+  }
+  
+  /* Fix section heading spacing */
+  h2 {
+    margin-bottom: 2rem;
+  }
+  
+  /* Ensure project-grid takes proper width */
+  .project-grid {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 
 /* Ensure no horizontal scrolling */
 html, body {
