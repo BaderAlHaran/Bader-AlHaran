@@ -918,64 +918,74 @@ footer {
     }
 }
 /* Improve mobile responsiveness */
+/* Additional mobile fixes */
 @media (max-width: 768px) {
-  /* Fix centering issues */
-  body {
-    overflow-x: hidden;
+  /* Fix project card alignment */
+  .project-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  /* Fix skill bars */
+  .skill-item {
     width: 100%;
   }
   
-  /* Make containers take full width */
-  .projects-skills-container,
-  .contact-section,
-  .hero-section {
-    width: 100%;
+  /* Center project content */
+  .projects-content, .skills-content {
+    width: 90%;
+    margin: 0 auto;
     padding: 1rem;
-    margin: 0;
   }
   
-  /* Fix padding and margins */
-  main {
-    padding: 0;
+  /* Fix text alignment in project cards */
+  .project-card h3, .project-card p {
+    width: 100%;
+    text-align: center;
   }
   
-  /* Adjust text sizes for mobile */
-  .hero-content h1 {
-    font-size: 2.5rem;
+  /* Remove right margin on containers */
+  .projects-skills-container {
+    padding: 1rem;
+    margin-right: 0;
+    box-sizing: border-box;
   }
   
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-  
-  /* Ensure project cards stay within bounds */
-  .project-grid {
+  /* Ensure proper spacing */
+  .project-grid, .skill-grid {
+    margin-right: 0;
     width: 100%;
   }
   
-  /* Make contact items stack better */
-  .contact-details {
-    gap: 1rem;
+  /* Fix any horizontal overflow */
+  section, div {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
-/* Fix for very small screens */
+/* Fix for the specific floating issue on skills section */
 @media (max-width: 480px) {
-  nav {
-    padding: 1rem;
+  .skills h2, .projects h2 {
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
   }
   
-  a {
-    margin: 8px;
-    font-size: 18px;
+  .skills h2::after, .projects h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  .hero-content h1 {
-    font-size: 2rem;
+  /* Ensure skill bars stay within container */
+  .skill-bar {
+    max-width: 100%;
   }
 }
+
+/* Ensure no horizontal scrolling */
 html, body {
-     max-width: 100%;
-     overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
