@@ -1000,74 +1000,53 @@ footer {
   }
 }
 /* Final mobile tweaks */
+/* More aggressive right margin fix for mobile */
 @media (max-width: 768px) {
-  /* Improve skill name alignment */
-  .skill-item h3 {
-    text-align: left;
-    padding-left: 10px;
+  /* Force container to take exact width */
+  .about-content, .projects-content, .skills-content, .contact-container {
+    width: 90% !important;
+    padding: 1rem !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
   }
   
-  /* Fix project cards */
-  .project-card {
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 1.5rem;
-    width: 95%;
+  /* Fix section containers */
+  .about, .projects, .skills, .contact-section {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
   }
   
-  /* Add space between project card elements */
-  .project-card h3 {
-    margin-top: 1.5rem;
+  /* Fix padding on main containers */
+  .projects-skills-container {
+    padding: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
   }
   
-  /* Fix section heading spacing */
-  h2 {
-    margin-bottom: 2rem;
-  }
-  
-  /* Ensure project-grid takes proper width */
-  .project-grid {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-/* Fix right margin issue on mobile */
-@media (max-width: 768px) {
-  .about-content, .projects-content, .skills-content {
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-  
-  .about {
-    width: calc(100% - 2rem);
-    margin: 0 1rem;
-    box-sizing: border-box;
-  }
-  
-  body {
+  /* Remove any browser defaults */
+  * {
+    margin-right: 0;
     padding-right: 0;
   }
   
-  /* Ensure proper container width and padding */
-  .contact-section {
-    width: calc(100% - 2rem);
-    margin: 1rem;
-    padding: 2rem 1rem;
-    box-sizing: border-box;
-  }
-  
-  /* Force proper text wrapping */
-  p, h1, h2, h3, h4, h5, h6 {
-    max-width: 100%;
-    word-wrap: break-word;
+  /* Fix text container width */
+  p {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-right: 0 !important;
   }
 }
 
-/* Ensure no horizontal scrolling */
+/* Final fix to ensure no horizontal scrolling */
 html, body {
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* Ensure no horizontal scrolling */
 
